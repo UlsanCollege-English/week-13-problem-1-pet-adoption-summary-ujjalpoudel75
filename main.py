@@ -15,7 +15,13 @@ def summarize_adoptions(adoptions):
     # TODO Step 6: Implement the algorithm in Python using a suitable data structure.
     # TODO Step 7: Test your function with small examples and fix bugs.
     # TODO Step 8: Check the time and space complexity of your final solution.
-    pass
+    summary = {}
+    for animal in adoptions:
+        if animal in summary:
+            summary[animal] += 1
+        else:
+            summary[animal] = 1
+    return summary
 
 
 if __name__ == "__main__":
